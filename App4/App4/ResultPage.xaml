@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.ResultPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#029788" Padding="24" CornerRadius="0">
+                <Label Text="Results" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+            <Frame>
+                <Button Text="Sortiranje uzalzno po user id" Clicked="Button_Clicked"/>
+            </Frame>
+            <Frame>
+                <Button Text="Sortiranje silazno po user id" Clicked="Button_Clicked1"/>
+            </Frame>
+            <Picker x:Name="picekerLanguage" Title="Odaberi jezik:">
+                <Picker.Items>
+                    <x:String>Slovenian</x:String>
+                    <x:String>English</x:String>
+                    <x:String>Spanish</x:String>
+                    <x:String>Romanian</x:String>
+                    <x:String>Italian</x:String>
+                    <x:String>Croatian</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Prikaz jezika" CornerRadius="15" x:Name="btnShow" TextColor="White" Clicked="btnShow_Clicked"/>
+
+            <ListView x:Name="testListView" ItemSelected="testListView_ItemSelected" Margin="20" RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding id_user}"/>
+                                <Label Text="{Binding email}"/>
+                                <Label Text="{Binding create_time}"/>
+                                <Label Text="{Binding id_exercise}"/>
+                                <Label Text="{Binding result_percent}"/>
+                                <Label Text="{Binding result_score}"/>
+                                <Label Text="{Binding result_max}"/>
+                                <Label Text="{Binding skill}"/>
+                                <Label Text="{Binding language}"/>
+                                <Label Text="{Binding result_date}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

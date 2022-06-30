@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#029788</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="LogOutButton" Clicked="LogoutButton_Clicked" IconImageSource="logout.png" Text="Logout"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="logo.png" VerticalOptions="Center" HeightRequest="100" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Frame OutlineColor="#CEE6F2" BackgroundColor="#D9EDF7">
+                    <Label Text="Dobrodošli u LanGuide aplikaciju" FontSize="Title"/>
+                </Frame>
+                <Frame OutlineColor="#CEE6F2" BackgroundColor="#D9EDF7">
+                    <Label Text="Pregled podataka o korisniku i njihovim rezultatima" FontSize="16" Padding="0,0,0,0"/>
+                </Frame>
+                <Button BackgroundColor="#E2A349" Text="KORISNICI" ImageSource="icons8_users_64.png" HeightRequest="100" Clicked="Button_Clicked">
+                </Button>
+                <Button BackgroundColor="#E2A349" Text="REZULTATI" ImageSource="icons8_result_64.png" HeightRequest="100" Clicked="Button_Clicked_1">
+                </Button>
+                <Button BackgroundColor="#E2A349" Text="JEZICI" ImageSource="icons8_language_96.png" HeightRequest="100" Clicked="Button_Clicked_2">
+                </Button>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
+

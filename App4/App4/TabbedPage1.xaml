@@ -1,0 +1,27 @@
+﻿<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            Title="LanGuide App"
+             x:Class="App4.TabbedPage1"
+            xmlns:local="clr-namespace:App4">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#029788" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#029788" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <!--Pages can be added as references or inline-->
+    <local:MainPage Title="Početna" Icon="icons8_home_96.png"/>
+    <local:UserPage Title="Korisnik" Icon="icons8_users_64.png"/>
+    <local:ResultPage Title="Rezultat" Icon="icons8_result_64.png" />
+    <local:LanguagePage Title="Jezik" Icon="icons8_language_96.png" />
+</TabbedPage>
+    
