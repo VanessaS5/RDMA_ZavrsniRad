@@ -7,12 +7,10 @@
             <Frame BackgroundColor="#029788" Padding="24" CornerRadius="0">
                 <Label Text="Results" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
             </Frame>
-            <Frame>
-                <Button Text="Sortiranje uzalzno po user id" Clicked="Button_Clicked"/>
-            </Frame>
-            <Frame>
-                <Button Text="Sortiranje silazno po user id" Clicked="Button_Clicked1"/>
-            </Frame>
+            
+            <Button Text="Sortiranje uzalzno po user id" Clicked="Button_Clicked" Grid.Column="0"/>
+            <Button Text="Sortiranje silazno po user id" Clicked="Button_Clicked1" Grid.Column="1"/>
+            
             <Picker x:Name="picekerLanguage" Title="Odaberi jezik:">
                 <Picker.Items>
                     <x:String>Slovenian</x:String>
@@ -23,7 +21,19 @@
                     <x:String>Croatian</x:String>
                 </Picker.Items>
             </Picker>
-            <Button Text="Prikaz jezika" CornerRadius="15" x:Name="btnShow" TextColor="White" Clicked="btnShow_Clicked"/>
+            <Button Text="Prikaz jezika" x:Name="btnShow" TextColor="White" Clicked="btnShow_Clicked"/>
+
+            <Picker x:Name="picekerSkill" Title="Odaberi vjestinu:">
+                <Picker.Items>
+                    <x:String>Grammar</x:String>
+                    <x:String>Listening</x:String>
+                    <x:String>Reading</x:String>
+                    <x:String>Speaking</x:String>
+                    <x:String>Vocabulary</x:String>
+                    <x:String>Writing</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Prikaz vjestina" x:Name="btnSkill" TextColor="White" Clicked="btnSkill_Clicked"/>
 
             <ListView x:Name="testListView" ItemSelected="testListView_ItemSelected" Margin="20" RowHeight="50">
                 <ListView.ItemTemplate>

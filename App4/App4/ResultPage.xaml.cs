@@ -257,7 +257,7 @@ namespace App4
         {
             if(picekerLanguage.SelectedIndex==-1)
             {
-                DisplayAlert("Language:", "Please select language", "OK");
+                DisplayAlert("Jezik:", "Molimo Vas da označite jezik", "OK");
                 return;
             }
         
@@ -265,6 +265,18 @@ namespace App4
             var search = modelList.Where(result => result.language == language).ToList();
             testListView.ItemsSource = search;
         }
-      
+
+        private void btnSkill_Clicked(object sender, EventArgs e)
+        {
+            if (picekerSkill.SelectedIndex == -1)
+            {
+                DisplayAlert("Vjestina:", "Molimo Vas da označite vještinu", "OK");
+                return;
+            }
+
+            string skill = picekerSkill.SelectedItem as string;
+            var search = modelList.Where(result => result.skill == skill).ToList();
+            testListView.ItemsSource = search;
+        }
     }
 }
